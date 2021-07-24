@@ -1,28 +1,48 @@
 <template>
   <div>
+    <!-- <pre>{{homepage.hero.image}}</pre> -->
+
     <div class="uk-section">
-      <div class="uk-container uk-container-large">
+      <div
+        class="uk-container uk-container-large"
+        :style="`background: url(${getStrapiMedia(homepage.hero.image[0].url)}) 50% 50% no-repeat`"
+      >
         <h1>{{ homepage.hero.title }}</h1>
-        <Articles :articles="articles" />
+        <article>{{ homepage.hero.description }}</article>
       </div>
     </div>
+
+    <div class="uk-section">
+      <div class="uk-container uk-container-large">
+        <h2>{{ homepage.about.title }}</h2>
+        <article>{{ homepage.about.text }}</article>
+      </div>
+    </div>
+
+    <Advantages :items="advantages" />
+
+    <!-- <Articles :articles="articles" /> -->
+
   </div>
 </template>
 
 <script>
-import Articles from "../components/Articles";
-import { getMetaTags } from "../utils/seo";
-import { getStrapiMedia } from "../utils/medias";
+// import Articles from '../components/Articles';
+import Advantages from '../components/Advantages/index';
+import { getMetaTags } from '../utils/seo';
+import { getStrapiMedia } from '../utils/medias';
 
 export default {
   components: {
-    Articles,
+    // Articles,
+    Advantages,
   },
   async asyncData({ $strapi }) {
     return {
-      articles: await $strapi.find("articles"),
-      homepage: await $strapi.find("homepage"),
-      global: await $strapi.find("global"),
+      // articles: await $strapi.find('articles'),
+      advantages: await $strapi.find('advantages'),
+      homepage: await $strapi.find('homepage'),
+      global: await $strapi.find('global'),
     };
   },
   head() {
@@ -41,11 +61,16 @@ export default {
       meta: getMetaTags(fullSeo),
       link: [
         {
-          rel: "favicon",
-          href: getStrapiMedia(favicon.url),
+          rel: 'favicon',
+          href: favicon.url ? getStrapiMedia(favicon.url) : null,
         },
       ],
     };
   },
+
+  methods: {
+    getStrapiMedia,
+  }
+
 };
 </script>

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/advantages",
+      "handler": "advantages.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/advantages/count",
+      "handler": "advantages.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/advantages/:id",
+      "handler": "advantages.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/advantages",
+      "handler": "advantages.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/advantages/:id",
+      "handler": "advantages.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/advantages/:id",
+      "handler": "advantages.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

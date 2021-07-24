@@ -69,7 +69,7 @@ export default {
       link: [
         {
           rel: "favicon",
-          href: getStrapiMedia(favicon.url),
+          href: favicon.url ? getStrapiMedia(favicon.url) : null,
         },
       ],
     };

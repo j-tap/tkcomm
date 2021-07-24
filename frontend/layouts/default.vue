@@ -7,7 +7,7 @@
             <a href="#modal-full" uk-toggle><span uk-icon="icon: table" /></a>
           </li>
           <li>
-            <nuxt-link to="/" tag="a">Strapi Blog</nuxt-link>
+            <nuxt-link to="/" tag="a">icon</nuxt-link>
           </li>
         </ul>
       </div>

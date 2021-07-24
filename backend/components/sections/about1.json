@@ -1,18 +1,14 @@
 {
-  "collectionName": "components_decoration_heroes",
+  "collectionName": "components_sections_about1s",
   "info": {
-    "name": "Hero",
-    "icon": "address-card",
+    "name": "about",
+    "icon": "info-circle",
     "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
-      "type": "text"
+      "type": "string"
     },
     "image": {
       "collection": "file",
@@ -25,6 +21,9 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }

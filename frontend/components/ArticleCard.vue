@@ -6,7 +6,7 @@
   >
     <div class="uk-card uk-card-muted">
       <div class="uk-card-media-top">
-        <img :src="getStrapiMedia(article.image.url)" height="100" />
+        <img v-if="article.image" :src="getStrapiMedia(article.image.url)" height="100" />
       </div>
       <div class="uk-card-body">
         <p v-if="article.category" id="category" class="uk-text-uppercase">
@@ -17,6 +17,7 @@
         <div class="uk-grid-small uk-flex-left" data-uk-grid="true">
           <div>
             <img
+              v-if="article.author.picture"
               class="avatar"
               :src="getStrapiMedia(article.author.picture.url)"
               style="position: static; border-radius: 50%; object-fit: cover"

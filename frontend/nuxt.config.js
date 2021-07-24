@@ -1,3 +1,5 @@
+import strapiEntities from "./config/strapiEntities";
+
 const strapiBaseUri = process.env.API_URL || "http://localhost:1337";
 
 export default {
@@ -29,24 +31,7 @@ export default {
   modules: ["@nuxtjs/markdownit", "@nuxtjs/strapi"],
   strapi: {
     url: strapiBaseUri,
-    entities: [
-      {
-        name: "articles",
-        type: "collection",
-      },
-      {
-        name: "categories",
-        type: "collection",
-      },
-      {
-        name: "homepage",
-        type: "single",
-      },
-      {
-        name: "global",
-        type: "single",
-      },
-    ],
+    entities: strapiEntities,
   },
   markdownit: {
     preset: "default",
