@@ -10328,7 +10328,7 @@ strapi-plugin-graphql@3.6.5:
     pluralize "^8.0.0"
     strapi-utils "3.6.5"
 
-strapi-plugin-i18n@3.6.5:
+strapi-plugin-i18n@^3.6.5:
   version "3.6.5"
   resolved "https://registry.yarnpkg.com/strapi-plugin-i18n/-/strapi-plugin-i18n-3.6.5.tgz#4ef3ab59d33a9094e91bd9a304d18d756806e70f"
   integrity sha512-AzSCfMNovZQ6ykgzdFB8zVgZQjFZdSMfStb1gOfRvNCzdnFTafujL+gSuJIHht6JpCOVcstaPG+IaLDyqVnRJQ==

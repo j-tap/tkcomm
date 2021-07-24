@@ -1,45 +1,29 @@
 <template>
-  <div>
+  <div class="page-content page-content--index">
     <!-- <pre>{{homepage.hero.image}}</pre> -->
-
-    <div class="uk-section">
-      <div
-        class="uk-container uk-container-large"
-        :style="`background: url(${getStrapiMedia(homepage.hero.image[0].url)}) 50% 50% no-repeat`"
-      >
-        <h1>{{ homepage.hero.title }}</h1>
-        <article>{{ homepage.hero.description }}</article>
-      </div>
-    </div>
-
-    <div class="uk-section">
-      <div class="uk-container uk-container-large">
-        <h2>{{ homepage.about.title }}</h2>
-        <article>{{ homepage.about.text }}</article>
-      </div>
-    </div>
-
-    <Advantages :items="advantages" />
-
-    <!-- <Articles :articles="articles" /> -->
+    <IndexHead :item="homepage.hero" />
+    <IndexAbout :item="homepage.about" />
+    <IndexAdvantages :items="advantages" />
 
   </div>
 </template>
 
 <script>
-// import Articles from '../components/Articles';
-import Advantages from '../components/Advantages/index';
-import { getMetaTags } from '../utils/seo';
-import { getStrapiMedia } from '../utils/medias';
+import IndexHead from '~/components/pages/index/Head';
+import IndexAbout from '~/components/pages/index/About';
+import IndexAdvantages from '~/components/pages/index/Advantages';
+
+import { getMetaTags } from '~/utils/seo';
+import { getStrapiMedia } from '~/utils/medias';
 
 export default {
   components: {
-    // Articles,
-    Advantages,
+    IndexHead,
+    IndexAbout,
+    IndexAdvantages,
   },
   async asyncData({ $strapi }) {
     return {
-      // articles: await $strapi.find('articles'),
       advantages: await $strapi.find('advantages'),
       homepage: await $strapi.find('homepage'),
       global: await $strapi.find('global'),
@@ -67,10 +51,6 @@ export default {
       ],
     };
   },
-
-  methods: {
-    getStrapiMedia,
-  }
 
 };
 </script>

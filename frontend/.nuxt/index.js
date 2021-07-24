@@ -16,7 +16,6 @@ import nuxt_plugin_cookieuniversalnuxt_308b4a84 from 'nuxt_plugin_cookieuniversa
 import nuxt_plugin_http_08ec307a from 'nuxt_plugin_http_08ec307a' // Source: .\\http.js (mode: 'all')
 import nuxt_plugin_strapi_5dce3c59 from 'nuxt_plugin_strapi_5dce3c59' // Source: .\\strapi.js (mode: 'all')
 import nuxt_plugin_markdownit_31c987ba from 'nuxt_plugin_markdownit_31c987ba' // Source: .\\markdown-it.js (mode: 'all')
-import nuxt_plugin_uikit_47fa8f2a from 'nuxt_plugin_uikit_47fa8f2a' // Source: ..\\plugins\\uikit.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -55,7 +54,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Staatliches"}],"style":[],"script":[]},
+    head: {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Montserrat"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -183,10 +182,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_markdownit_31c987ba === 'function') {
     await nuxt_plugin_markdownit_31c987ba(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_uikit_47fa8f2a === 'function') {
-    await nuxt_plugin_uikit_47fa8f2a(app.context, inject)
   }
 
   // Lock enablePreview in context

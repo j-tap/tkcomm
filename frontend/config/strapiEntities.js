@@ -1,14 +1,6 @@
 export default [
   {
-    name: "articles",
-    type: "collection",
-  },
-  {
     name: "advantages",
-    type: "collection",
-  },
-  {
-    name: "categories",
     type: "collection",
   },
   {

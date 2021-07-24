@@ -5,15 +5,14 @@ import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '..\\node_modules\\uikit\\dist\\css\\uikit.min.css'
-
-import '..\\node_modules\\uikit\\dist\\css\\uikit.css'
+import '..\\assets\\css\\reset.css'
 
 import '..\\assets\\css\\main.css'
 
+import _c256562c from '..\\layouts\\default copy.vue'
 import _6f6c098b from '..\\layouts\\default.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b) }
+const layouts = { "_default copy": sanitizeComponent(_c256562c),"_default": sanitizeComponent(_6f6c098b) }
 
 export default {
   render (h, props) {

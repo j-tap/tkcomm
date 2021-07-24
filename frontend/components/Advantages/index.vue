@@ -1,15 +1,12 @@
 <template>
-  <div>
-    <div class="uk-child-width-1-2" uk-grid>
-      <div>
-        <Advantage
-          v-for="item in items"
-          :key="item.id"
-          :item="item"
-        />
-      </div>
-    </div>
-  </div>
+  <ul>
+    <li
+      v-for="item in items"
+      :key="item.id"
+    >
+      <Advantage :item="item" />
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -19,6 +16,7 @@ export default {
   components: {
     Advantage,
   },
+
   props: {
     items: {
       type: Array,
