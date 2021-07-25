@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_services",
+  "info": {
+    "name": "services",
+    "icon": "clipboard-check"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "collection": "services"
+    }
+  }
+}

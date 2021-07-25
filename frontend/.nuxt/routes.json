@@ -1,20 +1,9 @@
 [
   {
-    "name": "articles-slug",
-    "path": "/articles/:slug?",
-    "component": "D:\\\\Projects\\\\_Web development\\\\strapi-test\\\\frontend\\\\pages\\\\articles\\\\_slug.vue",
-    "chunkName": "pages/articles/_slug"
-  },
-  {
-    "name": "categories-slug",
-    "path": "/categories/:slug?",
-    "component": "D:\\\\Projects\\\\_Web development\\\\strapi-test\\\\frontend\\\\pages\\\\categories\\\\_slug.vue",
-    "chunkName": "pages/categories/_slug"
-  },
-  {
     "name": "index",
     "path": "/",
     "component": "D:\\\\Projects\\\\_Web development\\\\strapi-test\\\\frontend\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_500380f8"
   }
 ]

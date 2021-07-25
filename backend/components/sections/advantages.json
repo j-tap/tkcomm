@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_advantages",
+  "info": {
+    "name": "advantages",
+    "icon": "medal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "collection": "advantages"
+    }
+  }
+}

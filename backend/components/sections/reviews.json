@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_reviews",
+  "info": {
+    "name": "reviews",
+    "icon": "comment-alt"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "collection": "reviews"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <template>
-  <ul>
+  <ul class="advantages">
     <li
-      v-for="item in items"
+      v-for="item in data.items"
       :key="item.id"
     >
       <Advantage :item="item" />
@@ -18,10 +18,23 @@ export default {
   },
 
   props: {
-    items: {
-      type: Array,
-      default: () => [],
+    data: {
+      type: Object,
+      default: () => {},
     },
   },
 };
 </script>
+
+<style lang="scss" scoped>
+  .advantages {
+    display: flex;
+    margin: 0 -30px;
+    max-width: 100%;
+    padding: 0;
+
+    li {
+      margin: 0 30px 0;
+    }
+  }
+</style>

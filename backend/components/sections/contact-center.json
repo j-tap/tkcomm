@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_contact_centers",
+  "info": {
+    "name": "Contact center",
+    "icon": "headset"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "collection": "contact-center"
+    }
+  }
+}

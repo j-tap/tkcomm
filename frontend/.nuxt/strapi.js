@@ -154,7 +154,7 @@ class Strapi extends Hookable {
 }
 
 export default async function (ctx, inject) {
-  [{"name":"advantages","type":"collection"},{"name":"homepage","type":"single"},{"name":"global","type":"single"}].forEach((entity) => {
+  [{"name":"homepage","type":"single"},{"name":"global","type":"single"},{"name":"advantages","type":"collection"},{"name":"contact_centers","type":"collection"},{"name":"licenses","type":"collection"},{"name":"reviews","type":"collection"},{"name":"services","type":"collection"}].forEach((entity) => {
   let key
   let type = 'collection'
   if (typeof entity === 'object') {

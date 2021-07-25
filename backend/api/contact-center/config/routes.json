@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/contact-centers",
+      "handler": "contact-center.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contact-centers/count",
+      "handler": "contact-center.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contact-centers/:id",
+      "handler": "contact-center.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/contact-centers",
+      "handler": "contact-center.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/contact-centers/:id",
+      "handler": "contact-center.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/contact-centers/:id",
+      "handler": "contact-center.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

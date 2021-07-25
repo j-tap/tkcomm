@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_licenses",
+  "info": {
+    "name": "licenses",
+    "icon": "file-contract"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "collection": "licenses"
+    }
+  }
+}

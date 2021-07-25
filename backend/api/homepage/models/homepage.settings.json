@@ -26,6 +26,26 @@
       "type": "component",
       "repeatable": false,
       "component": "sections.about1"
+    },
+    "contact_center": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.contact-center"
+    },
+    "licenses": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.licenses"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.services"
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.reviews"
     }
   }
 }
