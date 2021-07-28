@@ -2,7 +2,7 @@
   "kind": "singleType",
   "collectionName": "globals",
   "info": {
-    "name": "Global",
+    "name": "Глобальный",
     "description": ""
   },
   "options": {
@@ -10,6 +10,7 @@
     "timestamps": true,
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "favicon": {
       "model": "file",

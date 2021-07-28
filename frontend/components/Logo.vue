@@ -1,5 +1,5 @@
 <template>
-  <div class="logo">
+  <NuxtLink class="logo" to="/">
     <svg width="93" height="78" viewBox="0 0 93 78" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0)">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9888 20.5489C29.5584 21.8761 27.3374 23.5522 25.3971 25.5234C23.5173 27.4598 21.8651 29.603 20.4723 31.9117C19.0171 34.3379 17.9504 36.975 17.3107 39.7283C16.6296 42.4994 16.3801 45.3582 16.571 48.2048L14.1134 48.3964C13.9018 45.2959 14.1708 42.1814 14.911 39.1625C15.612 36.1579 16.7796 33.2807 18.3717 30.6348C19.8612 28.1653 21.6301 25.8741 23.6439 23.806C25.7505 21.6627 28.163 19.8404 30.8034 18.3979L31.9888 20.5489Z" fill="white"/>
@@ -21,5 +21,13 @@
         </clipPath>
       </defs>
     </svg>
-  </div>
+  </NuxtLink>
 </template>
+
+<style lang="scss" scoped>
+  .logo {
+    display: block;
+    font-size: 0;
+    text-decoration: none;
+  }
+</style>

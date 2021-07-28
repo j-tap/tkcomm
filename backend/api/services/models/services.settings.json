@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "services",
   "info": {
-    "name": "Services",
+    "name": "Услуга",
     "description": ""
   },
   "options": {

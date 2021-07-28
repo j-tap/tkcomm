@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "licenses",
   "info": {
-    "name": "Licenses",
+    "name": "Лицензия",
     "description": ""
   },
   "options": {

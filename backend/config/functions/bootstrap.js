@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const mime = require("mime-types");
+const pluralize = require('pluralize');
 const {
   categories,
   homepage,
@@ -168,4 +169,16 @@ module.exports = async () => {
       console.error(error);
     }
   }
+
+  // Добавление правил.
+  // Первый аргумент - регулярное выражение, второй - строка для замены
+  pluralize.addPluralRule(/глобальный$/i, 'глобальные');
+  pluralize.addPluralRule(/главная$/i, 'главные');
+  pluralize.addPluralRule(/новость$/i, 'новости');
+  pluralize.addPluralRule(/статья$/i, 'статьи');
+  pluralize.addPluralRule(/преимущество$/i, 'преимущества');
+  pluralize.addPluralRule(/контактный центр$/i, 'контактные центры');
+  pluralize.addPluralRule(/лицензия$/i, 'лицензии');
+  pluralize.addPluralRule(/отзыв$/i, 'отзывы');
+  pluralize.addPluralRule(/услуга$/i, 'услуги');
 };

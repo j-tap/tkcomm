@@ -1,23 +1,22 @@
 {
   "kind": "collectionType",
-  "collectionName": "contact_centers",
+  "collectionName": "articles",
   "info": {
-    "name": "Контактный центр",
+    "name": "Новость",
     "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "description": {
-      "type": "text"
+    "text": {
+      "type": "richtext"
     }
   }
 }

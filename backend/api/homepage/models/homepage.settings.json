@@ -2,7 +2,7 @@
   "kind": "singleType",
   "collectionName": "homepages",
   "info": {
-    "name": "Homepage",
+    "name": "Главная",
     "description": ""
   },
   "options": {
@@ -10,6 +10,7 @@
     "timestamps": true,
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "seo": {
       "type": "component",

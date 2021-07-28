@@ -1,6 +1,7 @@
 <template>
   <header class="header">
     <Logo />
+    <Menu />
     <address class="header-address">
       <div>
         <a :href="`tel:${global.contacts.phone1}`">{{ global.contacts.phone1 }}</a>
@@ -16,10 +17,12 @@
 import { mapGetters } from 'vuex';
 
 import Logo from '~/components/Logo';
+import Menu from '~/components/Menu';
 
 export default {
   components: {
     Logo,
+    Menu,
   },
 
   computed: {
@@ -35,12 +38,17 @@ export default {
     color: #fff;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     z-index: 7;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 0;
+    padding: 30px 50px;
+
+    .logo {
+      margin-left: 25px;
+    }
 
     &-address {
       font-style: normal;
