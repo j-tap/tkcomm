@@ -21,6 +21,10 @@ export default {
           value: '#about',
           text: 'О нас',
         },
+        {
+          value: '/news',
+          text: 'Новости',
+        },
       ],
     }
   },

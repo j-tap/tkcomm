@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_news",
+  "info": {
+    "name": "News",
+    "icon": "newspaper",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "collection": "articles"
+    }
+  }
+}

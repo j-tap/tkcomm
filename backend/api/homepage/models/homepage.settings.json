@@ -47,6 +47,11 @@
       "type": "component",
       "repeatable": false,
       "component": "sections.reviews"
+    },
+    "news": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.news"
     }
   }
 }

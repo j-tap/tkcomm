@@ -1,5 +1,5 @@
 <template>
-  <ul class="licenses">
+  <ul class="news">
     <li
       v-for="item in items"
       :key="item.id"
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .licenses {
+  .news {
     display: flex;
     margin: 0 -30px;
     max-width: 100%;

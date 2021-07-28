@@ -1,5 +1,19 @@
 [
   {
+    "name": "news",
+    "path": "/news",
+    "component": "D:\\\\Projects\\\\_Web development\\\\strapi-test\\\\frontend\\\\pages\\\\news\\\\index.vue",
+    "chunkName": "pages/news/index",
+    "_name": "_0a0c4645"
+  },
+  {
+    "name": "news-id",
+    "path": "/news/:id",
+    "component": "D:\\\\Projects\\\\_Web development\\\\strapi-test\\\\frontend\\\\pages\\\\news\\\\_id.vue",
+    "chunkName": "pages/news/_id",
+    "_name": "_1a1115ed"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "D:\\\\Projects\\\\_Web development\\\\strapi-test\\\\frontend\\\\pages\\\\index.vue",
