@@ -1,5 +1,5 @@
 <template>
-  <section class="block-index index-licenses">
+  <section class="block-page index-licenses">
     <Heading1 :title="data.title" />
     <Licenses :items="data.items" />
   </section>

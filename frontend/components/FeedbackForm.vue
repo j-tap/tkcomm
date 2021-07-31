@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import fetchData from '~/mixins/fetch'
+import { fetchData } from '~/utils/methods';
 
 import Input from '~/components/form/Input';
 import Textarea from '~/components/form/Textarea';
@@ -22,10 +22,6 @@ export default {
     Input,
     Textarea,
   },
-
-  mixins: [
-    fetchData,
-  ],
 
   data() {
     return {
@@ -40,6 +36,8 @@ export default {
   },
 
   methods: {
+    fetchData,
+
     async sendForm() {
       const sitename = process.server;
       const html = `<h1>Новое обращение на сайте ${sitename}</h1>

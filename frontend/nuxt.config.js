@@ -18,6 +18,10 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Montserrat',
       },
+      {
+        rel: 'icon',
+        type: 'image/x-icon', href: '/favicon.png',
+      }
     ],
   },
 
@@ -28,8 +32,22 @@ export default {
     '@assets/styles/index.scss',
   ],
 
-  // plugins: [{ src: '~/plugins/test.js', ssr: false }],
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/strapi'],
+  /*
+   ** Global CSS
+   */
+  styleResources: {
+    scss: ['@assets/styles/variables.scss']
+  },
+
+  plugins: [
+    // { src: '~/plugins/test.js', ssr: false },
+  ],
+
+  modules: [
+    '@nuxtjs/markdownit',
+    '@nuxtjs/strapi',
+    '@nuxtjs/style-resources',
+  ],
   strapi: {
     url: strapiBaseUri,
     entities: strapiEntities,
@@ -42,4 +60,9 @@ export default {
     injected: true,
     html: true,
   },
+
+  router: {
+    middleware: 'redirects',
+  },
+
 };

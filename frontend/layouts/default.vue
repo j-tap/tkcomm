@@ -20,8 +20,5 @@ export default {
     Footer,
   },
 
-  data() {
-    return {};
-  },
 };
 </script>

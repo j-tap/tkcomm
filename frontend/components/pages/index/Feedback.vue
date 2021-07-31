@@ -1,5 +1,5 @@
 <template>
-  <section class="block-index index-feedback">
+  <section class="block-page index-feedback">
     <FeedbackForm />
   </section>
 </template>

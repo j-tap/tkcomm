@@ -1,5 +1,5 @@
 <template>
-  <section class="block-index index-news">
+  <section class="block-page index-news">
     <Heading1 :title="data.title" />
     <News :items="data.items" />
   </section>

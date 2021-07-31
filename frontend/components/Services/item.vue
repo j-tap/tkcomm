@@ -1,16 +1,21 @@
 <template>
   <div class="service-item">
-    <div>
+    <NuxtLink :to="`${path}${item.id}`">
       <h3>{{ item.title }}</h3>
-      <img v-if="item.image" :src="getStrapiMedia(item.image.url)" />
+      <figure class="service-item__img">
+        <img v-if="item.image" :src="getStrapiMedia(item.image.url)" />
+      </figure>
       <p>{{ item.description }}</p>
-      <a href="#" @click.prevent="showModal = true">подробнее</a>
+      <div>
+        <span>подробнее</span>
+      </div>
+      <!-- <a href="#" @click.prevent="showModal = true">подробнее</a> -->
       <div v-if="item.index !== undefined">{{ item.index }}</div>
-    </div>
+    </NuxtLink>
 
-    <Modal v-model="showModal">
+    <!-- <Modal v-model="showModal">
       <article>{{ item.text }}</article>
-    </Modal>
+    </Modal> -->
   </div>
 </template>
 
@@ -33,6 +38,7 @@ export default {
 
   data() {
     return {
+      path: /services/,
       showModal: false,
     }
   },
@@ -42,3 +48,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+  .service-item {
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+</style>

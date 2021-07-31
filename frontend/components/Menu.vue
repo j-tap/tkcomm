@@ -9,23 +9,12 @@
 </template>
 
 <script>
+import menuList from '~/config/menu';
+
 export default {
   data() {
     return {
-      items: [
-        {
-          value: '/',
-          text: 'Главная',
-        },
-        {
-          value: '#about',
-          text: 'О нас',
-        },
-        {
-          value: '/news',
-          text: 'Новости',
-        },
-      ],
+      items: menuList,
     }
   },
 }

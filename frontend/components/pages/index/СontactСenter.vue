@@ -1,5 +1,5 @@
 <template>
-  <section class="block-index index-contact-center">
+  <section class="block-page index-contact-center">
     <Heading1 :title="data.title" />
     <ContactCenters :items="data.items" />
   </section>

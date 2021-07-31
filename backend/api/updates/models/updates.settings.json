@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "news",
+  "collectionName": "updates",
   "info": {
     "name": "Новость",
     "description": ""
@@ -14,6 +14,9 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     },
     "text": {
       "type": "richtext"

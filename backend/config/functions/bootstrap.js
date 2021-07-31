@@ -174,8 +174,9 @@ module.exports = async () => {
   // Первый аргумент - регулярное выражение, второй - строка для замены
   pluralize.addPluralRule(/глобальный$/i, 'глобальные');
   pluralize.addPluralRule(/главная$/i, 'главные');
+  pluralize.addPluralRule(/о компании$/i, 'о компаниях');
+
   pluralize.addPluralRule(/новость$/i, 'новости');
-  pluralize.addPluralRule(/статья$/i, 'статьи');
   pluralize.addPluralRule(/преимущество$/i, 'преимущества');
   pluralize.addPluralRule(/контактный центр$/i, 'контактные центры');
   pluralize.addPluralRule(/лицензия$/i, 'лицензии');

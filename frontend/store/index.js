@@ -11,3 +11,10 @@ export const mutations = {
     state.global = data;
   }
 }
+
+export const actions = {
+  async nuxtServerInit ({ commit }, { $strapi }) {
+    const global = await $strapi.find('global');
+    commit('setGlobal', global);
+  }
+}

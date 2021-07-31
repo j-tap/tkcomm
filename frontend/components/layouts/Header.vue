@@ -2,7 +2,7 @@
   <header class="header">
     <Logo />
     <Menu />
-    <address class="header-address">
+    <address class="header-address" v-if="global.contacts">
       <div>
         <a :href="`tel:${global.contacts.phone1}`">{{ global.contacts.phone1 }}</a>
       </div>

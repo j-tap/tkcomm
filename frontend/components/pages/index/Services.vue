@@ -1,5 +1,5 @@
 <template>
-  <section class="block-index index-services">
+  <section class="block-page index-services">
     <Heading1 :title="data.title" />
     <Services :items="data.items" />
   </section>

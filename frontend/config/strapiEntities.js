@@ -1,4 +1,5 @@
 export default [
+  /* Single types */
   {
     name: 'homepage',
     type: 'single',
@@ -7,6 +8,12 @@ export default [
     name: 'global',
     type: 'single',
   },
+  {
+    name: 'about',
+    type: 'single',
+  },
+
+  /* Multiple types */
   {
     name: 'advantages',
     type: 'collection',
@@ -25,6 +32,10 @@ export default [
   },
   {
     name: 'services',
+    type: 'collection',
+  },
+  {
+    name: 'news',
     type: 'collection',
   },
 ]

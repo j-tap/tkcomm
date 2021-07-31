@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import page from '~/mixins/page';
+
 import IndexHead from '~/components/pages/index/Head';
 import IndexAbout from '~/components/pages/index/About';
 import IndexСontactСenter from '~/components/pages/index/СontactСenter';
@@ -21,9 +23,6 @@ import IndexNews from '~/components/pages/index/News';
 import IndexServices from '~/components/pages/index/Services';
 import IndexReviews from '~/components/pages/index/Reviews';
 import IndexFeedback from '~/components/pages/index/Feedback';
-
-import { getMetaTags } from '~/utils/seo';
-import { getStrapiMedia } from '~/utils/medias';
 
 export default {
   components: {
@@ -37,38 +36,12 @@ export default {
     IndexFeedback,
   },
 
+  mixins: [page],
+
   async asyncData({ $strapi, store }) {
-    const global = await $strapi.find('global');
     const homepage = await $strapi.find('homepage');
-
-    store.commit('setGlobal', global);
-
     return {
       homepage,
-      global,
-    };
-  },
-
-  head() {
-    const { seo } = this.homepage;
-    const { defaultSeo, favicon, siteName } = this.global;
-
-    // Merge default and article-specific SEO data
-    const fullSeo = {
-      ...defaultSeo,
-      ...seo,
-    };
-
-    return {
-      titleTemplate: `%s | ${siteName}`,
-      title: fullSeo.metaTitle,
-      meta: getMetaTags(fullSeo),
-      link: [
-        {
-          rel: 'favicon',
-          href: favicon.url ? getStrapiMedia(favicon.url) : null,
-        },
-      ],
     };
   },
 
@@ -77,8 +50,8 @@ export default {
 
 <style lang="scss" scoped>
   .page-content--index {
-    & > .block-index:first-child {
-      padding-top: 200px;
+    & > .block-page:first-child {
+      margin-top: -$main-top-offset;
     }
   }
 </style>

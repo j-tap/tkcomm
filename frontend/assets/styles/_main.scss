@@ -4,7 +4,11 @@ body {
   color: #313131;
 }
 
-.block-index {
+.main {
+  padding-top: $main-top-offset;
+}
+
+.block-page {
   position: relative;
   padding: 60px 0 150px;
 }

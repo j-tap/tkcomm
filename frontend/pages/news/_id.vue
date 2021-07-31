@@ -1,19 +1,45 @@
 <template>
-  <article>
-    <Heading1 :title="data.title" />
-  </article>
+  <section class="page-content page-news-detail">
+    <NewsDetail :data="data" />
+  </section>
 </template>
 
 <script>
-import Heading1 from '~/components/Heading1';
+import page from '~/mixins/page';
+
+import { getStrapiMedia } from '~/utils/medias';
+
+import NewsDetail from '~/components/News/detail';
 
 export default {
   components: {
-    Heading1,
+    NewsDetail,
   },
+
+  mixins: [page],
+
+  async asyncData({ $strapi, store, params }) {
+    const matchingNews = await $strapi.find('updates', {
+      id: params.id,
+    });
+    return {
+      data: matchingNews[0] || {},
+    };
+  },
+
+  data() {
+    return {
+      seo: {
+        article: true,
+      },
+    };
+  },
+
+  methods: {
+    getStrapiMedia,
+  },
+
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

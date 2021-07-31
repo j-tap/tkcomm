@@ -21,7 +21,11 @@
       </g>
       <rect y="24" width="67" height="10" fill="#0F65D9"/>
     </svg>
-    <h2 class="heading-title">{{ title }}</h2>
+    <div class="heading-title">
+      <slot>
+        <h2>{{ title }}</h2>
+      </slot>
+    </div>
   </header>
 </template>
 
@@ -32,7 +36,7 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
+      default: null,
     },
   },
 }

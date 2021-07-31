@@ -1,5 +1,5 @@
 <template>
-  <section class="block-index index-head" :style="`background-image: url(${getStrapiMedia(item.images[0].url)})`">
+  <section class="block-page index-head" :style="`background-image: url(${getStrapiMedia(item.images[0].url)})`">
     <div class="index-head-content">
       <h1 class="index-head-title">{{ item.title }}</h1>
       <p class="index-head-subtitle">{{ item.description }}</p>
@@ -36,6 +36,7 @@ export default {
     min-height: 100vh;
     box-sizing: border-box;
     background: 50% 50% no-repeat none;
+    padding-top: 200px;
 
     &::before {
       content: '';
