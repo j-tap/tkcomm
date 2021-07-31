@@ -5,6 +5,14 @@ Personal website business card
 - [Nuxt.js](https://github.com/nuxt/nuxt.js) for frontend (based on [Vue.js](https://github.com/vuejs/vue))
 - [Strapi](https://github.com/strapi/strapi) for backend (API)
 
+### Start
+###### For development
+- `yarn develop`
+
+###### For production
+- `yarn build`
+- `yarn start`
+
 ### Deployment:
 [Strapi documentation](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment.html)
 
