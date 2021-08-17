@@ -36,7 +36,10 @@ export default {
    ** Global CSS
    */
   styleResources: {
-    scss: ['@assets/styles/variables.scss']
+    scss: [
+      '@assets/styles/variables.scss',
+      '@assets/styles/mixins/media.scss',
+    ]
   },
 
   plugins: [

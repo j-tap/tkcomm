@@ -48,6 +48,8 @@ export default {
 
 <style lang="scss" scoped>
   .about-info {
-    display: flex;
+    @include media('>tablet') {
+      display: flex;
+    }
   }
 </style>

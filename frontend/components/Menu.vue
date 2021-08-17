@@ -25,9 +25,17 @@ export default {
   $menu-item-text-size: 20px;
 
   .menu {
+    @include media('<=tablet') {
+      display: none;
+    }
+
     ul {
       display: flex;
       margin: 0 -#{$menu-item-indent} 0 -63px;
+
+      @include media('<=tablet') {
+        display: block;
+      }
 
       li {
         margin: 0 $menu-item-indent;

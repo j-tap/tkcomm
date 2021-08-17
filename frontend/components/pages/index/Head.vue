@@ -49,8 +49,10 @@ export default {
       margin-top: 38px;
 
       .container-fluid {
-        padding-left: 133px + $container-fluid-offset-h;
-        padding-right: 133px + $container-fluid-offset-h;
+        @include media('>tablet') {
+          padding-left: 133px + $container-fluid-offset-h;
+          padding-right: 133px + $container-fluid-offset-h;
+        }
       }
     }
 
@@ -60,6 +62,10 @@ export default {
       font-size: 80px;
       line-height: 1.2;
       text-transform: uppercase;
+
+      @include media('<=tablet') {
+        font-size: 40px;
+      }
     }
     &-subtitle {
       font-style: normal;
