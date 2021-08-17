@@ -13,6 +13,11 @@ body {
   padding: 60px 0 150px;
 }
 
+.container-fluid {
+  display: block;
+  padding: 0 $container-fluid-offset-h;
+}
+
 /* Form */
 .form-field {
   display: block;

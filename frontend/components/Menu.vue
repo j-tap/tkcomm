@@ -21,21 +21,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  $menu-item-indent: 15px;
+  $menu-item-text-size: 20px;
+
   .menu {
     ul {
       display: flex;
-      margin: 0 -20px;
+      margin: 0 -#{$menu-item-indent} 0 -63px;
 
       li {
-        margin: 0 20px;
+        margin: 0 $menu-item-indent;
 
         a {
           color: inherit;
           text-decoration: none;
           font-style: normal;
           font-weight: normal;
-          font-size: 20px;
-          line-height: 20px;
+          font-size: $menu-item-text-size;
+          line-height: 1;
           text-transform: uppercase;
         }
       }

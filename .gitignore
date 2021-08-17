@@ -106,6 +106,7 @@ coverage
 # Strapi
 ############################
 
+.vscode
 .env
 license.txt
 exports

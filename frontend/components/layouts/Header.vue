@@ -3,10 +3,12 @@
     <Logo />
     <Menu />
     <address class="header-address" v-if="global.contacts">
-      <div>
+      <div v-if="global.contacts.phone1">
+        <IconPhone/>
         <a :href="`tel:${global.contacts.phone1}`">{{ global.contacts.phone1 }}</a>
       </div>
-      <div>
+      <div v-if="global.contacts.phone2">
+        <IconPhone/>
         <a :href="`tel:${global.contacts.phone2}`">{{ global.contacts.phone2 }}</a>
       </div>
     </address>
@@ -18,11 +20,13 @@ import { mapGetters } from 'vuex';
 
 import Logo from '~/components/Logo';
 import Menu from '~/components/Menu';
+import IconPhone from '~/components/icons/IconPhone';
 
 export default {
   components: {
     Logo,
     Menu,
+    IconPhone,
   },
 
   computed: {
@@ -45,15 +49,20 @@ export default {
     width: 100%;
     padding: 30px 50px;
 
-    .logo {
-      margin-left: 25px;
-    }
-
     &-address {
       font-style: normal;
       font-weight: normal;
       font-size: 20px;
       line-height: 1;
+
+      & > * {
+        display: flex;
+        align-items: center;
+      }
+
+      svg {
+        margin-right: 15px;
+      }
 
       a {
         color: inherit;

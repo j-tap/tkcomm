@@ -7,7 +7,8 @@ Personal website business card
 
 ### Start
 ###### For development
-- `yarn develop`
+- `yarn start` Backend
+- `yarn dev` Frontend
 
 ###### For production
 - `yarn build`
