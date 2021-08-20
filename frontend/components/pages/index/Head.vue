@@ -3,7 +3,7 @@
     <div class="index-head-content">
       <div class="container-fluid">
         <h1 class="index-head-title" v-html="item.title"></h1>
-        <p class="index-head-subtitle" v-html="item.description"></p>
+        <div class="index-head-subtitle" v-html="item.description"></div>
         <a href="#">Подробнее</a>
       </div>
     </div>
