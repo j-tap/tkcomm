@@ -23,6 +23,10 @@ export default {
         type: 'image/x-icon', href: '/favicon.png',
       }
     ],
+    script: [
+      { src: '/js/jquery.js', type: 'text/javascript' },
+      { src: '/js/script.js', type: 'text/javascript', body: true },
+    ],
   },
 
   /*
@@ -30,6 +34,7 @@ export default {
    */
   css: [
     '@assets/styles/index.scss',
+    '@assets/styles/jquery.fullPage.scss',
   ],
 
   /*
@@ -38,12 +43,11 @@ export default {
   styleResources: {
     scss: [
       '@assets/styles/variables.scss',
-      '@assets/styles/mixins/media.scss',
     ]
   },
 
   plugins: [
-    // { src: '~/plugins/test.js', ssr: false },
+    // { src: '~/plugins/fragment.js', ssr: false },
   ],
 
   modules: [

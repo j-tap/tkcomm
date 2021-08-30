@@ -1,12 +1,9 @@
 <template>
-  <figure>
-    <div>
-      <img v-if="item.icon" :src="getStrapiMedia(item.icon.url)" height="100" />
-    </div>
-    <figcaption>
-      <p>{{ item.title }}</p>
-    </figcaption>
-  </figure>
+  <div>
+    <!-- :src="getStrapiMedia(item.icon.url)" -->
+    <img src="~/assets/icons/pen.svg" alt="pen" class="tab__advantage_img">
+    <p class="tab__advantage_text">{{ item.title }}</p>
+  </div>
 </template>
 
 <script>

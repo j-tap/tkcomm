@@ -1,24 +1,9 @@
 <template>
   <div>
-    <Header/>
-    <Main>
-      <nuxt />
-    </Main>
-    <Footer/>
+    <nuxt/>
   </div>
 </template>
 
 <script>
-import Header from '~/components/layouts/Header';
-import Main from '~/components/layouts/Main';
-import Footer from '~/components/layouts/Footer';
-
-export default {
-  components: {
-    Header,
-    Main,
-    Footer,
-  },
-
-};
+export default {};
 </script>

@@ -1,12 +1,13 @@
 <template>
-  <ul class="advantages">
-    <li
+  <div class="tab__advantage_content">
+    <div
+      class="tab__advantage_item"
       v-for="item in data.items"
       :key="item.id"
     >
       <Advantage :item="item" />
-    </li>
-  </ul>
+    </div>
+  </div>
 </template>
 
 <script>
