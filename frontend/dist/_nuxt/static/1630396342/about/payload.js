@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/about", (function(a,b){return {data:[{data:{id:1,text:"Текст о компании html",title:a,qqq:b,created_at:"2021-07-31T13:13:19.642Z",updated_at:"2021-07-31T16:05:27.025Z",seo:{id:4,metaTitle:a,metaDescription:"Описание страницы О нас",shareImage:b}}}],fetch:[],mutations:[]}}("О нас",null)));
