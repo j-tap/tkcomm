@@ -19,13 +19,15 @@
         </address>
       </div>
       <div class="nav__logo">
-        <Logo />
+        <Logo/>
       </div>
       <div class="nav__menu">
-        <Menu />
+        <Menu/>
       </div>
       <address class="nav__contact">
-        <img src="~/assets/icons/phone.svg" alt="phone" class="nav__phone">
+        <span class="nav__phone">
+          <IconPhone/>
+        </span>
         <a class="nav__phone_link" :href="`tel:${global.contacts.phone1}`">{{ global.contacts.phone1 }}</a>
       </address>
     </nav>
@@ -48,7 +50,9 @@
         </div>
       </a>
     </div>
-    <img src="~/assets/icons/scroll.svg" alt="scroll" class="header__main_scroll">
+    <div class="header__main_scroll">
+      <IconMouse/>
+    </div>
   </header>
 </template>
 
@@ -59,12 +63,14 @@ import { getStrapiMedia } from '~/utils/medias';
 import Logo from '~/components/Logo';
 import Menu from '~/components/Menu';
 import IconPhone from '~/components/icons/IconPhone';
+import IconMouse from '~/components/icons/IconMouse';
 
 export default {
   components: {
     Logo,
     Menu,
     IconPhone,
+    IconMouse,
   },
 
   computed: {
@@ -80,37 +86,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    z-index: 7;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 50px;
-
-    &-address {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 1;
-
-      & > * {
-        display: flex;
-        align-items: center;
-      }
-
-      svg {
-        margin-right: 15px;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-    }
-  }
-</style>
+<style lang="scss" scoped></style>

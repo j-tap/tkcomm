@@ -1,5 +1,5 @@
-$(document).ready(function(){ 
-    $(function(){
+$(function(){
+    $(window).load(function() {
         if ( $(window).width() > 768 ) {
             $("#fullpage").fullpage({
                 navigation: false,
@@ -92,14 +92,27 @@ var acc = document.getElementsByClassName("tab__item");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("tab__active");
-        if (this.selected) this.selected.classList.remove('selected');
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight){
-            panel.style.maxHeight = null;
+    acc[i].addEventListener("click", function(evt) {
+        if (evt.target.classList.contains('tab__close'))
+        {
+            this.classList.remove("tab__active");
         } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+            const selected = document.querySelector('.tab__content').querySelector('.tab__active');
+            if (selected) selected.classList.remove('tab__active');
+
+            this.classList.toggle("tab__active");
+
+            const panel = this.nextElementSibling;
+
+            if (panel)
+            {
+                if (panel.style.maxHeight)
+                {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            }
         }
     });
 }
@@ -109,6 +122,9 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
+        const selected = document.querySelector('.service__list').querySelector('.service__active');
+        if (selected) selected.classList.remove('service__active');
+
         this.classList.toggle("service__active");
         this.selected.classList.remove('selected');
         var panel = this.nextElementSibling;

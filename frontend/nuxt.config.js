@@ -15,10 +15,6 @@ export default {
     ],
     link: [
       {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat',
-      },
-      {
         rel: 'icon',
         type: 'image/x-icon', href: '/favicon.png',
       }
@@ -34,7 +30,6 @@ export default {
    */
   css: [
     '@assets/styles/index.scss',
-    '@assets/styles/jquery.fullPage.scss',
   ],
 
   /*

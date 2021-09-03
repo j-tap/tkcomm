@@ -182,4 +182,5 @@ module.exports = async () => {
   pluralize.addPluralRule(/лицензия$/i, 'лицензии');
   pluralize.addPluralRule(/отзыв$/i, 'отзывы');
   pluralize.addPluralRule(/услуга$/i, 'услуги');
+  pluralize.addPluralRule(/наше занятие$/i, 'наши занятия');
 };

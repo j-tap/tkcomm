@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/nashe-zanyaties",
+      "handler": "nashe-zanyatie.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nashe-zanyaties/count",
+      "handler": "nashe-zanyatie.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nashe-zanyaties/:id",
+      "handler": "nashe-zanyatie.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/nashe-zanyaties",
+      "handler": "nashe-zanyatie.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/nashe-zanyaties/:id",
+      "handler": "nashe-zanyatie.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/nashe-zanyaties/:id",
+      "handler": "nashe-zanyatie.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

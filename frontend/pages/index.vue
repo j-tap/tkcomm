@@ -332,6 +332,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import url('~/assets/styles/jquery.fullPage.scss');
+<style lang="scss">
+@import url('~assets/styles/jquery.fullPage.scss');
+@import url('~assets/styles/slick.scss');
 </style>

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nashi_zanyatiya",
+  "info": {
+    "name": "Наше занятие",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}
